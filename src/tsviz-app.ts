@@ -13,12 +13,8 @@ function main(args: string[]) {
         return;
     }
     
-    let targetPath = nonSwitches.length > 0 ? nonSwitches[0] : "";
-    let outputFilename = nonSwitches.length > 1 ? nonSwitches[1] : "diagram.png";
-
-    let dependenciesOnly = switches.indexOf("-dependencies") >= 0; // dependencies or uml?
-    tsviz.createGraph(targetPath, outputFilename, dependenciesOnly);
-    console.log("done");
+    console.log(tsviz.getModules(args[0]))
+    
 }
 
 export function run() {

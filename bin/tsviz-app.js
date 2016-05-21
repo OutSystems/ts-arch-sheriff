@@ -10,11 +10,7 @@ function main(args) {
             "  -dependencies: produces the modules' dependencies diagram");
         return;
     }
-    var targetPath = nonSwitches.length > 0 ? nonSwitches[0] : "";
-    var outputFilename = nonSwitches.length > 1 ? nonSwitches[1] : "diagram.png";
-    var dependenciesOnly = switches.indexOf("-dependencies") >= 0;
-    tsviz.createGraph(targetPath, outputFilename, dependenciesOnly);
-    console.log("done");
+    console.log(tsviz.getModules(args[0]));
 }
 function run() {
     main(process.argv.slice(2));

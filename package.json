@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/joaompneves/tsviz",
   "dependencies": {
-    "graphviz": ">=0.0.8",
     "typescript": "=1.8.10"
   }
 }

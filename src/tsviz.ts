@@ -4,14 +4,13 @@ import { readdirSync, lstatSync, existsSync } from "fs";
 import * as ts from "typescript";
 import { Module } from "./ts-elements";
 import * as analyser from "./ts-analyser"; 
-import * as umlBuilder from "./uml-builder";
 
 export interface OutputModule {
 	name: string;
 	dependencies: string[];
 }
 
-function getModules(targetPath: string) {
+export function getModules(targetPath: string) {
     if (!existsSync(targetPath)) {
         console.error("'" + targetPath + "' does not exist");
         return;
@@ -45,11 +44,6 @@ function getModules(targetPath: string) {
     process.chdir(originalDir); // go back to the original dir
     
     return modules;
-}
-
-export function createGraph(targetPath: string, outputFilename: string, dependenciesOnly: boolean) {
-    let modules = getModules(targetPath);
-    umlBuilder.buildUml(modules, outputFilename, dependenciesOnly);
 }
 
 export function getModulesDependencies(targetPath: string): OutputModule[] {

@@ -2,7 +2,6 @@
 var fs_1 = require("fs");
 var ts = require("typescript");
 var analyser = require("./ts-analyser");
-var umlBuilder = require("./uml-builder");
 function getModules(targetPath) {
     if (!fs_1.existsSync(targetPath)) {
         console.error("'" + targetPath + "' does not exist");
@@ -31,11 +30,7 @@ function getModules(targetPath) {
     process.chdir(originalDir);
     return modules;
 }
-function createGraph(targetPath, outputFilename, dependenciesOnly) {
-    var modules = getModules(targetPath);
-    umlBuilder.buildUml(modules, outputFilename, dependenciesOnly);
-}
-exports.createGraph = createGraph;
+exports.getModules = getModules;
 function getModulesDependencies(targetPath) {
     var modules = getModules(targetPath);
     var outputModules = [];

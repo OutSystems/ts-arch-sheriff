@@ -1,28 +1,27 @@
 {
-  "name": "tsviz",
-  "version": "1.0.10",
-  "description": "Simple tool to create UML diagrams from typescript modules",
-  "main": "bin/tsviz.js",
+  "name": "ts-arch-sheriff",
+  "version": "0.0.1",
+  "description": "Tool to verify that typescript module dependencies are according to set of rules.",
+  "main": "bin/arch-sheriff.js",
   "bin": {
-    "tsviz": "bin/tsviz-main.js"
+    "ts-arch-sheriff": "bin/main.js"
   },
-  "preferGlobal": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/joaompneves/tsviz.git"
+    "url": "https://github.com/OutSystems/ts-arch-sheriff.git"
   },
   "keywords": [
     "typescript",
-    "uml",
-    "diagram",
+    "lint",
+    "architecture",
     "dependencies"
   ],
   "author": "João Neves",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joaompneves/tsviz/issues"
+    "url": "https://github.com/OutSystems/ts-arch-sheriff/issues"
   },
-  "homepage": "https://github.com/joaompneves/tsviz",
+  "homepage": "https://github.com/OutSystems/ts-arch-sheriff",
   "dependencies": {
     "typescript": "=1.8.10"
   }

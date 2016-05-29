@@ -1,23 +1,11 @@
-# tsviz
-> This simple tool creates a UML diagram from typescript modules.
+# TypeScript Architecture Sheriff
 
-![alt tag](https://raw.githubusercontent.com/joaompneves/tsviz/master/samples/diagram.png)
+Like automated testing can be more effective at ensuring behavior
+than documentation, linters can be more effective at enforcing code
+styles than code reviews.
 
-## Installation
+The TypeScript Architecture Sheriff aims at enforcing a set of rules
+over module dependencies on a TypeScript project.
+This way, project collaborators can be guided to check if the change
+being introduced in the architecture is correct before the code review. 
 
-```bash
-$ npm install -g tsviz
-```
-You also need to install [GraphViz](http://www.graphviz.org/Download.php)
-
-## Usage
-
-In order to create a diagram for an entire project you simply type: 
-
-```bash
-$ tsviz samples/ diagram.png
-```
-
-### Arguments
-* `-dependencies`
-  Produces a diagram with the dependencies between modules.
